@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <form action="" method="get">
+
+        <div>
+            <label for="inp1">Enter Name</label>
+            <input type="text" required name="name" id="inp1" placeholder="ex. John Doe">
+        </div><br>
+        <div>
+            <label for="inp2">Enter Email</label>
+            <input type="email" value="rounakbasak12@gmail.com" readonly required name="email" id="inp2"
+                placeholder="ex. johndoe@gmail.com">
+        </div><br>
+        <div>
+            <label for="inp3">Enter Password</label>
+            <input type="password" required name="password" id="inp3" placeholder="**********">
+        </div><br>
+        <div>
+            <label for="inp4">Enter Mobile</label>
+            <input type="number" required name="mobile" id="inp4" min="0" placeholder="+91 8966564567">
+        </div><br>
+        <div>
+            <label for="inp5">Enter Date of Birth</label>
+            <input name="dob" required type="datetime-local" id="inp5">
+        </div><br>
+        <div class="box box6">
+            <label for="inp6">Favourite Color</label>
+            <input type="color" required name="fav_col" id="inp6">
+        </div>
+        <div class="box box7" id="id7">
+            <label for="inp7">Gender</label>
+            <div> <input type="radio" name="gender" value="male" id="inp71"> <label for="inp71">Male</label></div>
+            <div> <input type="radio" name="gender" value="female" id="inp72"> <label for="inp72">Female</label></div>
+            <div> <input type="radio" name="gender" value="others" id="inp73"> <label for="inp73">Others</label></div>
+        </div>
+
+        <div>
+            <label for="inp8">Choose One Car</label>
+            <select name="car" id="" required>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Suzuki">Suzuki</option>
+
+            </select>
+        </div><br>
+
+        <div>
+            <label for="inp9">Enter Description</label>
+            <textarea name="description" id="inp9" cols="5" rows="5">Nice Profile Picture</textarea>
+        </div>
+
+        <div>
+            <label for="inp10">Upload Resume</label>
+            <input type="file" name="reseume" id="inp10" accept="image/*">
+        </div>
+
+        <div>
+            <a href="photo-1542435503-956c469947f6.avif" download>Click To Download Image </a>
+        </div><br>
+
+        <div>
+
+            <details>
+                <summary>What is C++?</summary>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae iste ex ad provident magni repellendus doloremque eaque odio sequi.
+            </details>
+            <kbd>Ctrl + S</kbd>
+
+        </div>
+
+        <button type="submit">Submit</button>
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+
+</html>
