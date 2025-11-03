@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodWagon</title>
+
+    <!-- ✅ Load Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ✅ Tailwind CSS (Browser CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<body class="font-inter">
+    <nav class="flex justify-evenly items-center p-4">
+        <!-- left logo section -->
+        <div class="flex items-center gap-2">
+            <img src="assets/logo.png" class="w-[40px] h-[40px]" alt="">
+            <p class="text-2xl font-inter-bold">
+                <span class="text-[#F17228]">food</span><span class="text-[#F6AD0D]">wagon</span>
+            </p>
+        </div>
+
+        <!-- middle delivery address  -->
+        <div class="flex items-center gap-3">
+            <p class="font-inter-bold text-[#424242]">Delivery to:</p>
+            <img class="w-5" src="./assets/map-marker.png" alt="">
+            <p class="text-[#424242]">
+                <span class="font-inter-regular">Current Location</span>
+                <span class="font-inter-bold">Mohammadpur Bus Stand, Dhaka</span>
+            </p>
+        </div>
+        <!--right login and search  -->
+        <div class="flex items-center gap-10">
+            <div class="flex items-center gap-3">
+                <img class="w-5" src="./assets/search.png" alt="">
+                <span class="font-inter-bold text-[#424242]">Search Food</span>
+            </div>
+
+            <button class="flex shadow-xl/30 shadow-[#FFA001] py-3 px-5 rounded-md items-center gap-3">
+                <img class="w-5" src="./assets/user.png" alt="">
+                <span class="font-inter-bold text-[#FFA001]">Login</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="h-[620px] flex items-center justify-evenly bg-linear-to-r/hsl from-[#FACC2D] to-[#FFA905]">
+        <div>
+            <span class="text-[65px] font-inter-bold text-white">Are you starving?</span><br>
+            <span class="font-inter-regular text-md text-[#424242] ">Within a few clicks, find meals that are accessible
+                near you</span>
+
+            <div class="bg-white rounded-xl shadow-sm mt-7">
+                <div class="flex gap-5  border-b border-[#EEEEEE] p-5 ">
+                    <div class="bg-[#F7EAE4] rounded-md px-3 py-1 flex items-center gap-3"><img class="w-5"
+                            src="./assets/bike.png" alt=""><span
+                            class="text-[#F17228] font-inter-semibold">Delivery</span></div>
+                    <div class="flex px-3 py-1 items-center gap-3"><img class="w-4" src="./assets/cart.png" alt=""><span
+                            class="text-[#757575] font-inter-semibold">Pickup</span></div>
+                </div>
+                <div class="flex items-center justify-center rounded-xl gap-5 p-5 ">
+                    <div class="w-[60%] relative">
+                        <input type="text" class="w-full placeholder-[#999999] bg-[#F5F5F5] px-10 py-2 rounded-sm"
+                            placeholder="Enter Your Address">
+                        <img class="w-4 absolute top-2.5 left-3" src="./assets/map-marker2.png" alt="">
+
+                    </div>
+                    <button
+                        class="flex bg-linear-to-r/hsl from-[#FD725C] to-[#F8601B] py-3 px-5 rounded-md items-center gap-3">
+                        <img class="w-5" src="./assets/search2.png" alt="">
+                        <span class="font-inter-bold text-white">Find Food</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="./assets/food.png" alt="">
+        </div>
+    </section>
+
+
+    <section class="w-full flex items-center justify-center gap-5 py-15">
+        <div class="">
+
+            <div class="relative ">
+                <img src="./assets/food1.png" class="w-[300px] rounded-2xl" alt="">
+                <span
+                    class="absolute bg-[#FFB30E] rounded-tr-2xl rounded-bl-2xl text-white bottom-0 font-inter-bold text-xl py-2 px-3">15%
+                    Off</span>
+            </div>
+            <p class="font-inter-bold text-[#424242] mt-5 mb-2">Greys Vage</p>
+            <span class="text-[#F17228] bg-[#F7EAE4] rounded-md px-3 py-1 font-inter-bold ">6 Days Remaining</span>
+        </div>
+        <div class="">
+
+            <div class="relative ">
+                <img src="./assets/food2.png" class="w-[300px] rounded-2xl" alt="">
+                <span
+                    class="absolute bg-[#FFB30E] rounded-tr-2xl rounded-bl-2xl text-white bottom-0 font-inter-bold text-xl py-2 px-3">10%
+                    Off</span>
+            </div>
+            <p class="font-inter-bold text-[#424242] mt-5 mb-2">Greys Vage</p>
+            <span class="text-[#F17228] bg-[#F7EAE4] rounded-md px-3 py-1 font-inter-bold ">6 Days Remaining</span>
+        </div>
+        <div class="">
+
+            <div class="relative ">
+                <img src="./assets/food3.png" class="w-[300px] rounded-2xl" alt="">
+                <span
+                    class="absolute bg-[#FFB30E] rounded-tr-2xl rounded-bl-2xl text-white bottom-0 font-inter-bold text-xl py-2 px-3">25%
+                    Off</span>
+            </div>
+            <p class="font-inter-bold text-[#424242] mt-5 mb-2">Greys Vage</p>
+            <span class="text-[#F17228] bg-[#F7EAE4] rounded-md px-3 py-1 font-inter-bold ">7 Days Remaining</span>
+        </div>
+        <div class="">
+
+            <div class="relative ">
+                <img src="./assets/food4.png" class="w-[300px] rounded-2xl" alt="">
+                <span
+                    class="absolute bg-[#FFB30E] rounded-tr-2xl rounded-bl-2xl text-white bottom-0 font-inter-bold text-xl py-2 px-3">20%
+                    Off</span>
+            </div>
+            <p class="font-inter-bold text-[#424242] mt-5 mb-2">Greys Vage</p>
+            <span class="text-[#F17228] bg-[#F7EAE4] rounded-md px-3 py-1 font-inter-bold ">8 Days Remaining</span>
+        </div>
+    </section>
+</body>
+
+</html>
