@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './component/ui/Button'
 import Input from './component/ui/Input'
 import TodoTable from './component/ui/TodoTable'
@@ -10,8 +10,13 @@ function App() {
   let [todoName, setTodoName] = useState("")
   let [priority, setPriority] = useState('')
 
-  let [todos, setTodos] = useState([])
+  let [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || [])
 
+
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
 
   let handleAddTodo = () => {
@@ -36,12 +41,6 @@ function App() {
 
 
   };
-
-
-
-
-
-
 
   return (
     <div className='min-h-screen bg-linear-to-br from-green-50 to-emerald-50 p-4 md:p-8'>

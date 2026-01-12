@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from './Button'
 
 function TodoTable({ todos, setTodos }) {
@@ -12,12 +12,10 @@ function TodoTable({ todos, setTodos }) {
             )
         );
     };
-    
+
     let handleDeleteTodo = (id) => {
         setTodos(prevTodos => prevTodos.filter((todo) => todo.id !== id));
     };
-
-
 
 
     return (
