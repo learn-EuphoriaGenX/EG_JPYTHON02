@@ -36,10 +36,6 @@ function App() {
     } else {
       return toast.error("Todo Name and priority Required!")
     }
-
-
-
-
   };
 
   return (
