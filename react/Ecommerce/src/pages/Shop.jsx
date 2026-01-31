@@ -55,8 +55,14 @@ function Shop() {
         }
     }
 
+
+    let scrollToTop = () => {
+        window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+    }
+
     useEffect(() => {
         fetchAllProducts()
+        scrollToTop()
     }, [skip, url])
     useEffect(() => {
         fetchAllCategories()
