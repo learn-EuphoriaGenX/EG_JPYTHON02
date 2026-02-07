@@ -1,16 +1,17 @@
 import React from "react";
 import { products } from "./data";
+import toast from "react-hot-toast";
 
 function Products({ carts, setCarts }) {
 
 
     let handleAddToCart = (id) => {
-
         let cartItem = products.filter(item => item.id == id)
         setCarts([
             ...carts,
             cartItem
         ])
+        return toast.success('Products Add to Cart!', { position: "bottom-center" });
     }
 
     return (
@@ -23,8 +24,7 @@ function Products({ carts, setCarts }) {
                 {products.map((item) => (
                     <div
                         key={item.id}
-                        className="border bg-white flex items-center justify-between rounded-lg p-4 shadow-sm hover:shadow-md transition"
-                    >
+                        className="border bg-white flex items-center justify-between rounded-lg p-4 shadow-sm hover:shadow-md transition">
                         {/* Left */}
                         <div>
                             <h3 className="text-lg font-semibold">{item.name}</h3>
