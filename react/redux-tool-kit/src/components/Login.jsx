@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CustomInput from "./CustomInput";
 import toast, { Toaster } from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { setUser } from "./store/slices/authSlice";
 
-function Login({ user, setUser }) {
+function Login() {
 
 
     let navigate = useNavigate()
+    let dispatch = useDispatch()
+
+    let [user, setUser2] = useState({
+        email: "",
+        password: ""
+    })
+
 
     let handleOnSubmit = (e) => {
         e.preventDefault()
@@ -14,14 +23,11 @@ function Login({ user, setUser }) {
             toast.error('Email And Password Required!', { position: "bottom-center" });
             return;
         }
+        dispatch(setUser({ email: user.email, password: user.password }))
 
         toast.success('Login Successfull!', { position: "bottom-center" });
-        setUser({ ...user, isLoggedIn: true })
         navigate("/")
     }
-
-
-
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -30,11 +36,11 @@ function Login({ user, setUser }) {
                 {/* Form */}
                 <form onSubmit={handleOnSubmit} className="space-y-4">
                     {/* Email */}
-                    <CustomInput onChange={(e) => setUser({ ...user, email: e.target.value })} name={"email"} value={user.email} label={"Email"} placeholder={"Enter your email"} type={"email"} />
+                    <CustomInput onChange={(e) => setUser2({ ...user, email: e.target.value })} name={"email"} value={user.email} label={"Email"} placeholder={"Enter your email"} type={"email"} />
 
 
                     {/* Password */}
-                    <CustomInput onChange={(e) => setUser({ ...user, password: e.target.value })} name={"password"} value={user.password} label={"Password"} placeholder={"Enter your password"} type={"password"} />
+                    <CustomInput onChange={(e) => setUser2({ ...user, password: e.target.value })} name={"password"} value={user.password} label={"Password"} placeholder={"Enter your password"} type={"password"} />
 
                     {/* Button */}
                     <button

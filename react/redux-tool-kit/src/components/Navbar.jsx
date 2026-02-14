@@ -1,14 +1,25 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { unsetUser } from "./store/slices/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-function Navbar({ user, setUser, carts, setCarts }) {
+
+function Navbar({ carts, setCarts }) {
   const navigate = useNavigate();
 
+  let dispatch = useDispatch()
+
+
   const handleLogout = () => {
-    setUser({ isLoggedIn: false });
+    dispatch(unsetUser())
     setCarts([]);
+    localStorage.removeItem("carts");
     navigate("/login");
   };
+
+  let user = useSelector((state) => state.auth)
+  console.log(user);
+  
 
   const routes = [
     { name: "Home", path: "/", show: true },

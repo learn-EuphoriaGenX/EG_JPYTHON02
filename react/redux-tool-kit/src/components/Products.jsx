@@ -11,6 +11,10 @@ function Products({ carts, setCarts }) {
             ...carts,
             cartItem
         ])
+        localStorage.setItem("carts", JSON.stringify([
+            ...carts,
+            cartItem
+        ]))
         return toast.success('Products Add to Cart!', { position: "bottom-center" });
     }
 
